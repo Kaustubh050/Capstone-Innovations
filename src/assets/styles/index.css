@@ -1,0 +1,294 @@
+:root {
+  --brand-accent: #0056b3; /* Industrial Blue */
+  --dark-bg: #0f172a;     /* Deep tech background */
+}
+
+
+
+
+.header-bg{
+    background-color: beige;
+}
+
+/* Tagline card animation */
+.hero-card {
+  background-color: #ffffff;
+  padding: 1.8rem 2.2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.split-heading {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.split-left,
+.split-right {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Safer, controlled animation */
+.split-left {
+  transform: translateX(-40px);
+  animation: slideFromLeft 1.5s ease-out forwards;
+}
+
+.split-right {
+  transform: translateX(40px);
+  animation: slideFromRight 1.5s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes slideFromLeft {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   HERO IMAGE – FINAL FIX
+   =============================== */
+
+.hero-image {
+  width: 100%;
+  height: auto;        /* Natural ratio */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Desktop polish (optional) */
+@media (min-width: 992px) {
+  .hero-image {
+    max-height: 420px; /* Keeps image neat */
+  }
+}
+
+/* ===============================
+   SCROLL ANIMATION BASE
+   =============================== */
+.animate {
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Left → Right */
+.slide-left {
+  transform: translateX(-40px);
+}
+
+.slide-right {
+  transform: translateX(40px);
+}
+
+/* Bottom → Up */
+.slide-up {
+  transform: translateY(40px);
+}
+
+/* Card stagger delay */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+:root {
+  --brand-accent: #0056b3;   /* Industrial Blue */
+  --about-bg: #0f172a;       /* Deep tech background */
+}
+
+.about-hero {
+  background-color: var(--about-bg);
+  padding: 4rem 1.5rem;
+  border-radius: 12px;
+}
+
+.accent-line {
+  width: 80px;
+  height: 4px;
+  background-color: var(--brand-accent);
+}
+
+/* Accent color */
+.text-accent {
+  color: var(--brand-accent);
+}
+
+/* Icon circle */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 86, 179, 0.12);
+  color: var(--brand-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 86, 179, 0.3);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--brand-accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: var(--brand-accent);
+}
+
+/* ===============================
+   SERVICES SECTION
+   =============================== */
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 86, 179, 0.25);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--brand-accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--brand-accent);
+}
+
+/* ===============================
+   CONTACT – ROW STYLE (NO CARDS)
+   =============================== */
+
+.contact-section {
+  background-color: #f8fafc;
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 86, 179, 0.12);
+  color: var(--brand-accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+.footer-section {
+  background-color: #0f172a; /* deep industrial blue */
+}
+
+.footer-section h5,
+.footer-section h6 {
+  letter-spacing: 0.04em;
+}
+
+.footer-links li {
+  color: #cbd5e1;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-links li:hover {
+  color: var(--brand-accent);
+}
+
+.footer-closing {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  max-width: 420px;
+}
+
+.footer-bottom {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  cursor: pointer;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.nav-link:hover {
+  color: var(--brand-accent);
+}

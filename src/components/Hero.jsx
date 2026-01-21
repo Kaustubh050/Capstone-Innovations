@@ -2,7 +2,7 @@ import heroImage from "../assets/images/CNC.jpg";
 
 function Hero() {
   return (
-    <section className="py-5">
+    <section id="home" className="py-5">
       <div className="container">
         <div className="row align-items-center">
 

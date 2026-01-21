@@ -14,7 +14,11 @@ function Header() {
       <div className="container">
 
         {/* Logo */}
-        <a className="navbar-brand" href="#">
+        <button
+          type="button"
+          className="navbar-brand bg-transparent border-0 p-0"
+          onClick={() => scrollToSection("home")}
+        >
           <img
             src={logo}
             alt="Capstone Innovations"
@@ -22,7 +26,7 @@ function Header() {
             height="50"
             className="d-inline-block align-text-top"
           />
-        </a>
+        </button>
 
         {/* Mobile Toggle */}
         <button
